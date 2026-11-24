@@ -1,0 +1,13 @@
+name: SiegePal API test
+on:
+  workflow_dispatch:
+    inputs:
+      scan_types:
+        description: Scan types
+        required: false
+        default: ""
+jobs:
+  wait:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "scan_types=${{ inputs.scan_types }}" && sleep 90
